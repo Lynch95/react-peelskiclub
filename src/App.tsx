@@ -1,26 +1,29 @@
-import { Route, Routes } from "react-router-dom"
-import Home from "./pages/Home"
-import { Box } from "@chakra-ui/react"
-import Action from "./pages/Action"
-import NavBar from "./components/NavBar"
-import Footer from "./components/Footer"
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import { Box, Container, VStack } from "@chakra-ui/react";
+import Action from "./pages/Action";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-<>
-    <NavBar />
+    <>
+    
+      <VStack bg="#F4F3F2">
+        <NavBar />
 
-<Box>
-    <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/action" element={<Action />} />
-     </Routes>
-     
-</Box>
-<Footer />
+        <Box height="100%">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/action" element={<Action />} />
+          </Routes>
+        </Box>
 
-  </>
-  )
+        <Footer footText="Contact - Andy Baddock" />
+      </VStack>
+      
+    </>
+  );
 }
 
-export default App
+export default App;
