@@ -1,9 +1,11 @@
-import React from 'react'
+import Slideshow from '../components/Slideshow';
 
-function Action() {
+
+const Action = () => {
+  
   return (
-    <div>Action</div>
+    <Slideshow />
   )
-}
 
-export default Action
+}
+export default Action;

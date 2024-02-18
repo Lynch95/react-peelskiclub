@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Box, Heading, Text, VStack, Button } from '@chakra-ui/react';
 
 const History = () => {
-  const [isExpanded, setIsExpanded] = useState(false); // State to manage content expansion
+  const [isExpanded, setIsExpanded] = useState(false); 
 
-  const toggleExpansion = () => setIsExpanded(!isExpanded); // Function to toggle content expansion
+  const toggleExpansion = () => setIsExpanded(!isExpanded); 
 
   return (
     <Box bg="blue.50" p={{ base: 4, md: 8 }} mt={8}>
@@ -14,10 +14,10 @@ const History = () => {
         </Heading>
 
         <Text>
-        The Peel Ski Club was established against the backdrop of the conflict in Northern Ireland. It was formed by officers from the Metropolitan Police Service with the aim of providing recuperative holidays for members of the Royal Ulster Constabulary who had sustained injuries while on duty.
+        The Peel Ski Club was established against the backdrop of the conflict in Northern Ireland. It was formed by officers from the Metropolitan Police Service with the aim of providing holidays for members of the Royal Ulster Constabulary who had sustained injuries while on duty.
         </Text>
 
-{/* Read More Button */}
+
 {!isExpanded && (
           <Button onClick={toggleExpansion} colorScheme="blue">
             Read More
@@ -25,23 +25,24 @@ const History = () => {
         )}
 
        
-        {/* Expanded Content */}
+       
         {isExpanded && (
           <>
 
 <Text>
-The club's inaugural trip was in 1998 to the Spital am Semmering ski resort in Austria. There, adaptive skiing programs enabled even those with severe injuries to engage in this enriching sport.
+The first trip took place in 1998 to the ski resort in Spital am Semmering in Austria. Adaptive skiing enabled even the most severely injured officers to participate in this life-enhancing sport.
         </Text>
 
             <Text>
-            Participants, referred to as "adaptive skiers," are accompanied by two or three volunteer "buddies" who assist and ski alongside them throughout the week. This inaugural trip was a tremendous success, leading to the event becoming a regular occurrence every two years.
+            Each adaptive skier has two or three buddies that ski with them throughout the week and care for them as needed. The trip was very successful and as a result, has become a regular event every two years.
             </Text>
 
             <Text>
-            The advent of the peace process in Northern Ireland, which led to a reduction in service-related injuries among officers, prompted the club to broaden its membership. It now welcomes individuals with disabilities, whether from injury or illness, who are not affiliated with the police force.
+            The peace process in Northern Ireland has meant fewer officers were being injured in service, and so the club has diversified, taking non-police personnel who were disabled due to injury or illness.
+            
             </Text>
 
-            {/* Additional content continues here... */}
+           
           </>
         )}
       </VStack>
