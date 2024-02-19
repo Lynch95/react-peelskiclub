@@ -1,14 +1,16 @@
 import { Box, HStack, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+
 
 const HomeInfo = () => {
   return (
-    <HStack justify="center">
+    <HStack justify="center" spacing={8}>
       <Box
-        borderRadius={20}
+        borderRadius="lg"
         bg="blue.200"
-        w={{ base: "100vw", lg: "50vw" }}
+        w={{ base: "90vw", lg: "50vw" }}
         mt="4"
+        p={4}
+        boxShadow="xl"
       >
         <Text mx={4} mt={2} mb={2}>
           <Heading as="h3" size="lg" mb={4}>

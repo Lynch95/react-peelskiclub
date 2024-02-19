@@ -1,6 +1,6 @@
 import { Flex, Link as ChakraLink, Box, Heading, Image } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-import logoImage from '/src/peelimages/logo.png';
+import logoImage from '/peelimages/logo.png';
 
 const NavBar = () => {
   return (
@@ -12,7 +12,7 @@ const NavBar = () => {
 
         <Box>
           <ChakraLink as={RouterLink} to="/" pr={4}>Home</ChakraLink>
-          <ChakraLink as={RouterLink} to="/Action">Peel in Action</ChakraLink>
+          <ChakraLink as={RouterLink} to="/action">Peel in Action</ChakraLink>
         </Box>
       </Flex>
     </Box>

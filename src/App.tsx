@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import { Box, Container, VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import Action from "./pages/Action";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
