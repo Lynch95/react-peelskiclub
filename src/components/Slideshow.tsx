@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Box, Image, IconButton, useBreakpointValue, Center, Heading, HStack } from '@chakra-ui/react';
+import { useState } from 'react';
+import { Image, IconButton, useBreakpointValue, Center, Heading, HStack } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 interface Props {
@@ -18,7 +18,7 @@ const Slideshow = ({ images, heading }: Props) => {
     setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  // This will determine how the image fits within its container
+ 
   const objectFitValue: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down' = useBreakpointValue({
     base: 'cover',
     xl: 'contain',
@@ -30,13 +30,18 @@ const Slideshow = ({ images, heading }: Props) => {
         <Heading size={{ base: 'x', lg: 'xl' }}>{heading}</Heading>
       </HStack>
       <Center
-        w={{ base: "100vw", lg: "80vw" }}
-        h={{ base: "50vh", lg: "80vh" }}
-        maxW="1920px"
-        position="relative"
-        mx="auto"
-        overflow="hidden"
-      >
+      w={{ base: "100vw", lg: "80vw" }}
+      h={{ base: "50vh", lg: "60vh" }} 
+      maxW="1920px"
+      position="relative"
+      mx="auto"
+      overflow="hidden"
+      bg="gray.100" 
+      borderRadius="lg"
+      boxShadow="xl" 
+      transition="box-shadow 0.3s ease-in-out" 
+      _hover={{ boxShadow: '2xl' }} 
+    >
         <Image
           src={images[currentImage]}
           alt={`Slide ${currentImage + 1}`}

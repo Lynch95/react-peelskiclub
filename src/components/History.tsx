@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Box, Heading, Text, VStack, Button } from '@chakra-ui/react';
 
 const History = () => {

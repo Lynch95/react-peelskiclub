@@ -1,28 +1,27 @@
-import { HStack, Heading, AspectRatio, Box } from "@chakra-ui/react";
+import { VStack, Heading, AspectRatio, Box } from "@chakra-ui/react";
 
 const VideoSection = () => {
-
-  const videoIds = ['Kf53tBbA00A', 'dT9Xip4xRQ0',];
+  const videoIds = ['Kf53tBbA00A', 'dT9Xip4xRQ0'];
 
   return (
-    <>
-      <HStack justify='center' my={6}>
-        <Heading size={{base: 'x', lg: 'xl'}}>Videos</Heading>
-      </HStack>
-      <HStack justify="center" spacing={4} wrap="wrap">
+    <VStack spacing={{ base: 8, lg: 16 }} align="stretch">
+      <Heading textAlign="center" size={{ base: 'x', lg: 'xl' }} my={8}>
+        Videos
+      </Heading>
+      <VStack spacing={4}>
         {videoIds.map((videoId) => (
-          <Box key={videoId} p={2} w={{ base: '100%', md: '48%', lg: '31.33%' }}>
-            <AspectRatio ratio={16 / 9}>
+          <Box key={videoId} w="full" shadow="md" rounded="lg" overflow="hidden">
+            <AspectRatio ratio={16 / 9} maxW={{ base: 'full', md: '80%', lg: '60%' }} mx="auto">
               <iframe
-                title="YouTube video"
+                title={`YouTube video ${videoId}`}
                 src={`https://www.youtube.com/embed/${videoId}`}
                 allowFullScreen
               />
             </AspectRatio>
           </Box>
         ))}
-      </HStack>
-    </>
+      </VStack>
+    </VStack>
   )
 }
 
