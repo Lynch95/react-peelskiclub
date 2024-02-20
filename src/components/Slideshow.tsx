@@ -20,14 +20,14 @@ const Slideshow = ({ images, heading }: Props) => {
 
  
   const objectFitValue: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down' = useBreakpointValue({
-    base: 'cover',
+    base: 'contain',
     xl: 'contain',
   }) || 'cover';
 
   return (
     <>
       <HStack justify='center' mt={4} mb={4}>
-        <Heading size={{ base: 'x', lg: 'xl' }}>{heading}</Heading>
+        <Heading size={{ base: 'xl', lg: 'xl' }}>{heading}</Heading>
       </HStack>
       <Center
       w={{ base: "100vw", lg: "80vw" }}
