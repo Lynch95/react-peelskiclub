@@ -1,4 +1,4 @@
-import { Box, HStack, Link, Icon, Text, VStack, } from "@chakra-ui/react";
+import { Box, VStack, HStack, Link, Icon, Text } from "@chakra-ui/react";
 import { FaFacebook } from "react-icons/fa";
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 
@@ -13,27 +13,27 @@ const Footer = ({ footText }: Props) => {
 
   return (
     <Box bg="blue.200" w="100%" p={4} color="white">
-   
-     
-      <VStack spacing={4} justify="center">
-       
-        <Text fontWeight="bold">{footText}</Text>
+      <VStack spacing={4} align="center">
+        <Text fontWeight="bold" fontSize="lg">
+          {footText}
+        </Text>
+        <Text>Andrew Baddock - Club Secretary and Holiday Organiser</Text>
+        <Text>Email: peelskiclub@gmail.com</Text>
+        <Text>Mobile: 07726711773</Text>
+
         <HStack spacing={4}>
-         
           <Link href={mailtoUrl} isExternal>
-            <Icon as={FiMail} w={6} h={6} />
+            <Icon as={FiMail} w={6} h={6} _hover={{ color: "blue.300" }} />
           </Link>
-          
           <Link href={telUrl} isExternal>
-            <Icon as={FiPhoneCall} w={6} h={6} />
+            <Icon as={FiPhoneCall} w={6} h={6} _hover={{ color: "blue.300" }} />
           </Link>
-          
           <Link href={facebookUrl} isExternal>
-            <Icon as={FaFacebook} w={6} h={6} />
+            <Icon as={FaFacebook} w={6} h={6} _hover={{ color: "blue.300" }} />
           </Link>
         </HStack>
-        <Text>Visit the group on Facebook</Text>
-        
+
+        <Text fontSize="sm">Visit the group on Facebook</Text>
       </VStack>
     </Box>
   );

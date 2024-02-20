@@ -19,7 +19,7 @@ function App() {
           </Routes>
         </Box>
 
-        <Footer footText="Contact - Andy Baddock" />
+        <Footer footText="Contact" />
       </VStack>
       
     </>
